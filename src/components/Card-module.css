@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
+.card { 
+    width: 150px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Adamina", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card-suit {
+    font-size: 50px;
+    position: absolute;
+}
+.card-suit-top{
+    top: 0px;
+    left: 2px;
+}
+.card-suit-bottom{
+    bottom: 0px;
+    right: 2px;
+}
+.card-value {
+    font-size: 100px;
+}
