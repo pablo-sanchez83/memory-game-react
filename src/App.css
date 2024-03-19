@@ -6,15 +6,72 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
+    font-family: sans-serif;
 }
 #root {
+    position: relative;
     width: 60%;
-
-    display:grid;
-    gap: 10px;
-
+    display: grid;
+    gap: 30px;
     place-items: center;
+    grid-template-columns: repeat(4, minmax(130px, 1fr)); /* 4 columnas */
+    grid-template-rows: repeat(3, minmax(180px, 1fr)); /* 3 filas */
+  }
+  
+  .win {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    padding: 150px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .win button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .win button:hover {
+    background-color: #45a049;
+  }
+  .NewGame{
+    
+    grid-column: 1 / -1;
+  }
+  .NewGame button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .NewGame button:hover {
+    background-color: #45a049;
+  }
 
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-}
+  

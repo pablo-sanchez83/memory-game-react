@@ -88,7 +88,10 @@ function App() {
         <button onClick={handleNewGame}>Nueva partida</button>
       </div>
       {
-        gameOver && <h1 className="win">Ganaste</h1>
+        gameOver && <div className="win">
+          Ganaste
+          <button onClick={handleNewGame}>Nueva partida</button>
+          </div>
       }
     </>
   );
