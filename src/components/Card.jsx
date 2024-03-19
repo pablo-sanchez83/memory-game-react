@@ -1,6 +1,6 @@
 import CardImg from "../assets/card.png";
 import "./Card-module.css";
-export default function Card ({flipped = false, valor, color, icono}) {
+export default function Card ({flipped = false, valor, color, icono, handlePlay}) {
     const style = {
         color: color
     };
@@ -12,6 +12,6 @@ export default function Card ({flipped = false, valor, color, icono}) {
                 <span className="card-value" style={style}>{valor}</span>
             </div>
         : 
-        <img className="card" src={CardImg} alt="CardBack" />
+        <button onClick={handlePlay}><img className="card" src={CardImg} alt="CardBack" /></button>
     )
 }
