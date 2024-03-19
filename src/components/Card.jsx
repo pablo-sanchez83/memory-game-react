@@ -1,18 +1,15 @@
-import { ValoresCarta, PalosColores } from "../constants";
 import CardImg from "../assets/card.png";
 import "./Card-module.css";
-export default function Card ({flipped = false}) {
-    const ValorCarta = ValoresCarta[Math.floor(Math.random()*ValoresCarta.length)];
-    const infoCarta = PalosColores[Math.floor(Math.random()*PalosColores.length)];
+export default function Card ({flipped = false, valor, color, icono}) {
     const style = {
-        color: infoCarta.color
+        color: color
     };
     return (
         flipped ?
             <div className="card">
-                <span className="card-suit card-suit-top" style={style}>{infoCarta.icono}</span>
-                <span className="card-suit card-suit-bottom" style={style}>{infoCarta.icono}</span>
-                <span className="card-value" style={style}>{ValorCarta}</span>
+                <span className="card-suit card-suit-top" style={style}>{icono}</span>
+                <span className="card-suit card-suit-bottom" style={style}>{icono}</span>
+                <span className="card-value" style={style}>{valor}</span>
             </div>
         : 
         <img className="card" src={CardImg} alt="CardBack" />
